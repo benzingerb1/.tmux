@@ -2,6 +2,10 @@ tmux -> start session
 tmux  new -s session_name -> named session
 <leader> d -> detach session
 
+I echoed $TERM in the terminal and found "xterm-256color", set it in tmux to get both bash and vim colors correct
+set -g default-terminal "xterm-256color"
+
+
 tmux ls -> view sessions
 
 NOTE: tmux sessions take numbers or names 
