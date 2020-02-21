@@ -1,19 +1,31 @@
-tmux -> start session
-tmux  new -s session_name -> named session
-<leader> d -> detach session
+start session
+$ tmux 
 
-tmux ls -> view sessions
+named session
+$ tmux new -s session_name 
 
-NOTE: tmux sessions take numbers or names 
+detach session
+$ <leader> d 
 
-tmux attach-session -t 0 -> attach to session 0
-tmux attach-session -t my_session -> attach to session my_session
+view sessions
+$ tmux ls 
 
-<leader> c -> create new window
-<leader> w -> window list choices
-<leader> , -> rename current window
-<leader> 0 -> switch to window 0
-<leader> x -> close current pane
+Attach to session
+$ tmux attach-session -t 0 
+$ tmux attach-session -t my_session 
+
+|------------|-----------------------|
+| windows    |                       |
+| <leader> c | create new window     |
+| <leader> w | window list choices   |
+| <leader> , | rename current window |
+| <leader> 0 | switch to window 0    |
+|------------|-----------------------|
+| panes      |                       |
+| <leader> x | close current pane    |
+| <leader> % | a vertical split      |
+| <leader> " | a horizontal split    |
+|------------|-----------------------|
 
 
 mostly grokked:
@@ -27,16 +39,6 @@ https://gist.github.com/spicycode/1229612
 
 reddit thread that touches on clipboards, navigator, and resizing:
 https://old.reddit.com/r/vim/comments/c11cad/use_ctrlw_for_both_tmux_and_vim/
-
-
-todo: 
-change window switching to follow vim keys instead of arrow keys
-change pane style
-
-
-split pane:
-<leader> % -> a vertical split
-<leader> " -> a horizontal split
 
 scrolling:
 https://superuser.com/questions/209437/how-do-i-scroll-in-tmux
